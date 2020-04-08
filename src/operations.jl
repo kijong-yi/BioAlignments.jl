@@ -94,6 +94,17 @@ function isdeleteop(op::Operation)
     return op == OP_DELETE || op == OP_SKIP
 end
 
+"""
+    isqueryop(op::Operation)
+
+Test `op ∈ (OP_MATCH, OP_SOFT_CLIP, OP_INSERT, OP_SEQ_MATCH, OP_SEQ_MISMATCH)`.
+"""
+function isqueryop(op::Operation)
+	return op == OP_MATCH || op == OP_SOFT_CLIP || op == OP_INSERT  || op == OP_SEQ_MATCH || op == OP_SEQ_MISMATCH
+end
+
+
+
 function Base.convert(::Type{Operation}, c::Char)
     i = convert(Int, c)
     @inbounds op = i < 128 ? char_to_op[i+1] : OP_INVALID
