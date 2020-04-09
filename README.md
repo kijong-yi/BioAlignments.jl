@@ -7,6 +7,12 @@
 [![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Gitter](https://badges.gitter.im/BioJulia/BioAlignments.jl.svg)](https://gitter.im/BioJulia/BioAlignments.jl?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+## Personal modification
+A small modification for personal purpose.
+Following function is added.
+`isqueryop(op::Operation)` which test `op ∈ (OP_MATCH, OP_SOFT_CLIP, OP_INSERT, OP_SEQ_MATCH, OP_SEQ_MISMATCH)`.
+
+
 
 ## Description
 BioAlignments provides alignment algorithms and data structures.
